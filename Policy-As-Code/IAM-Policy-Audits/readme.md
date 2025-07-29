@@ -81,7 +81,7 @@ This lab runs best in GitHub Codespaces. Choose to either fork the repo for a qu
 
 ### Option A: Quickstart – Fork or Open the Repo
 
-> If you want to dive straight into testing the policy and running the Rego, fork the GitHub repo or download the included ZIP. All necessary files are included.
+> If you want to dive straight into testing the policy and running the Rego, fork the GitHub repo and start on Step 4. Terraform and Conftest will be automatically installed and all necessary files are included.
 > 
 
 [GRC Playground](https://github.com/ashpearce/GRC-Playground)
