@@ -53,6 +53,36 @@ By completing this lab, you will:
 
 ---
 
+## Lab Setup
+
+This lab runs best in GitHub Codespaces. Choose to either fork the repo for a quickstart, or build it from scratch yourself for a better learning experience.
+
+### Option A: Quickstart – Fork or Open the Repo
+
+> If you want to dive straight into testing the policy and running the Rego, fork the GitHub repo and start on Step 4. Terraform and Conftest will be automatically installed and all necessary files are included.
+> 
+
+[GRC Playground](https://github.com/ashpearce/GRC-Playground)
+
+---
+
+### Option B: Build It Yourself (Recommended)
+
+> Want to learn by building it from scratch? Great. Follow the instructions below to:
+> 
+- Create the Terraform file
+- Write your own `policy.rego`
+- Create a `conftest.yaml`
+- Generate the Terraform plan and test it manually
+
+### Step 1: Open a Codespace
+
+1. Go to [https://github.com](https://github.com/) and open any repo you own (or fork [GRC Playground](https://github.com/ashpearce/GRC-Playground))
+2. Click the green **`<> Code`** button
+3. Choose **`Open with Codespaces → New codespace`**
+
+---
+
 ## Step-by-Step Lab Instructions
 
 ### Step 1: Create the IAM Configuration File
