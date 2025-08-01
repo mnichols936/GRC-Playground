@@ -81,6 +81,43 @@ This lab runs best in GitHub Codespaces. Choose to either fork the repo for a qu
 2. Click the green **`<> Code`** button
 3. Choose **`Open with Codespaces → New codespace`**
 
+### Step 2: Install Terraform
+
+In your Codespaces terminal:
+
+```bash
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl unzip
+
+curl -fsSL https://apt.releases.hashicorp.com/gpg | \
+  sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+  https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+  sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+sudo apt update && sudo apt install terraform -y
+
+```
+
+Verify it works:
+
+```bash
+terraform --version
+```
+
+### Step 3: Install Conftest
+
+Still in your terminal:
+
+```bash
+curl -L https://github.com/open-policy-agent/conftest/releases/download/v0.45.0/conftest_0.45.0_Linux_x86_64.tar.gz -o conftest.tar.gz
+tar -xzf conftest.tar.gz
+sudo mv conftest /usr/local/bin/
+conftest --version
+```
+
+If you see the version number, you're good to go.
+
 ---
 
 ## Step-by-Step Lab Instructions
