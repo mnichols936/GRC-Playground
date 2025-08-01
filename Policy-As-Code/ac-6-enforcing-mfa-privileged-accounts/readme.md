@@ -186,7 +186,7 @@ deny[message] {
 Execute the following command in your browser-based terminal:
 
 ```bash
-conftest test iam_config.json --policy require_mfa.rego
+conftest test iam_config.json
 ```
 
 #### What happens:
