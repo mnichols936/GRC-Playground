@@ -213,7 +213,7 @@ In `iam_config.json`, update Ashley’s user object:
 Now rerun the policy:
 
 ```bash
-conftest test iam_config.json --policy require_mfa.rego
+conftest test iam_config.json
 ```
 
 You should now see **no errors**, indicating compliance with AC-6(7).
