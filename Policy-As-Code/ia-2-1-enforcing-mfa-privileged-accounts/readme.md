@@ -1,4 +1,4 @@
-# Enforcing MFA for Privileged Accounts (AC-6(7))
+# Enforcing MFA for Privileged Accounts (IA-2(1))
 
 ## Overview
 
@@ -216,7 +216,7 @@ Now rerun the policy:
 conftest test iam_config.json
 ```
 
-You should now see **no errors**, indicating compliance with AC-6(7).
+You should now see **no errors**, indicating compliance with IA-2(1).
 
 ---
 
@@ -261,7 +261,7 @@ Privileged accounts, including those with administrative or system-level access.
 
 ## Wrap-Up: Why This Lab Matters
 
-In this lab, you created and tested a Policy-as-Code rule that enforces a core GRC control: **AC-6(7)** which requires MFA for privileged accounts.
+In this lab, you created and tested a Policy-as-Code rule that enforces a core GRC control: **IA-2(1)** which requires MFA for privileged accounts.
 
 Here’s why this matters beyond passing a compliance checklist:
 
