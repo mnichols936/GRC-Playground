@@ -1,6 +1,6 @@
 {
   "PublicAccessBlockConfiguration": {
-    "BlockPublicAcls": false,
+    "BlockPublicAcls": [YOUR_ANSWER_HERE],
     "IgnorePublicAcls": true,
     "BlockPublicPolicy": true,
     "RestrictPublicBuckets": true
