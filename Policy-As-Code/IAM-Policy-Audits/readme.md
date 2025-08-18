@@ -132,9 +132,14 @@ terraform --version
 Still in your terminal:
 
 ```bash
-curl -L https://github.com/open-policy-agent/conftest/releases/download/v0.45.0/conftest_0.45.0_Linux_x86_64.tar.gz -o conftest.tar.gz
-tar -xzf conftest.tar.gz
-sudo mv conftest /usr/local/bin/
+mkdir -p ~/.local/bin
+curl -sSLf -o /tmp/conftest.tgz \
+  "https://github.com/open-policy-agent/conftest/releases/download/v0.62.0/conftest_0.62.0_Linux_x86_64.tar.gz"
+tar -xzf /tmp/conftest.tgz -C /tmp
+mv /tmp/conftest ~/.local/bin/
+chmod +x ~/.local/bin/conftest
+export PATH="$HOME/.local/bin:$PATH"
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 conftest --version
 ```
 
@@ -217,18 +222,16 @@ Create a `policy` folder, then create a file named `iam.rego` in the folder and 
 ```
 package main
 
-# This rule denies policies that include Action = "*"
-deny[msg] {
+deny contains msg if {
   statement := input.resource.aws_iam_policy[_].policy.Statement[_]
   statement.Action == "*"
-  msg = "Wildcard action '*' is not allowed."
+  msg := "Wildcard action '*' is not allowed."
 }
 
-# This rule denies policies that include Resource = "*"
-deny[msg] {
+deny contains msg if {
   statement := input.resource.aws_iam_policy[_].policy.Statement[_]
   statement.Resource == "*"
-  msg = "Wildcard resource '*' is not allowed."
+  msg := "Wildcard resource '*' is not allowed."
 }
 
 ```
